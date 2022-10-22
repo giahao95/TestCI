@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 3</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Users</h1>
+        <div class="header-bottom">
+          <div class="search-section">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search users" />
+          </div>
+          <button><i class="fa-solid fa-bars"></i></button>
+          <nav>
+            <a href="#">Reputation</a>
+            <a href="#">New users</a>
+            <a href="#">Votes</a>
+            <a href="#">Editors</a>
+            <a href="#">Moderators</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="user-list">
+        <div class="user-item">
+          <div class="user-item-img">
+            <img src="./images/Ellipse 1.png" alt="user image" />
+          </div>
+          <div class="user-item-content">
+            <h3>Lelah Nichols</h3>
+            <p>Troy, MI</p>
+            <div class="user-tag">
+              <span>clothes</span>
+              <span>stem</span>
+            </div>
+          </div>
+        </div>
+        <div class="user-item">
+          <div class="user-item-img">
+            <img src="./images/Ellipse 2.png" alt="user image" />
+          </div>
+          <div class="user-item-content">
+            <h3>Jesus Weiss</h3>
+            <p>Fort Worth, TX</p>
+            <div class="user-tag">
+              <span>headset</span>
+              <span>gadget</span>
+              <span>speed</span>
+              <span>winter</span>
+            </div>
+          </div>
+        </div>
+        <div class="user-item">
+          <div class="user-item-img">
+            <img src="./images/Ellipse 3.png" alt="user image" />
+          </div>
+          <div class="user-item-content">
+            <h3>Annie Rice</h3>
+            <p>Austin, TX</p>
+            <div class="user-tag">
+              <span>road</span>
+              <span>mountain</span>
+              <span>trip</span>
+              <span>earth</span>
+              <span>nature</span>
+            </div>
+          </div>
+        </div>
+        <div class="user-item">
+          <div class="user-item-img">
+            <img src="./images/Ellipse 4.png" alt="user image" />
+          </div>
+          <div class="user-item-content">
+            <h3>Robert Brower</h3>
+            <p>Cincinnati, OH</p>
+            <div class="user-tag">
+              <span>Maintenance</span>
+              <span>gears</span>
+              <span>frames</span>
+              <span>repair</span>
+            </div>
+          </div>
+        </div>
+        <div class="user-item">
+          <div class="user-item-img">
+            <img src="./images/Ellipse 5.png" alt="user image" />
+          </div>
+          <div class="user-item-content">
+            <h3>Amy Cambell</h3>
+            <p>Warrior, AL</p>
+            <div class="user-tag">
+              <span>music</span>
+              <span>disks</span>
+            </div>
+          </div>
+        </div>
+        <div class="user-item">
+          <div class="user-item-img">
+            <img src="./images/Ellipse 6.png" alt="user image" />
+          </div>
+          <div class="user-item-content">
+            <h3>Anthony S.Morin</h3>
+            <p>Lyndhurst, NJ</p>
+            <div class="user-tag">
+              <span>vinatage</span>
+              <span>electric</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const $navBtn = document.querySelector("button");
+      const $navEle = document.querySelector("nav");
+
+      $navBtn.addEventListener("click", (event) => {
+        $navEle.classList.toggle("nav-active");
+
+        if (event.target.classList[1] === "fa-bars") {
+          event.target.classList.remove("fa-bars");
+          event.target.classList.add("fa-xmark");
+        } else {
+          event.target.classList.remove("fa-xmark");
+          event.target.classList.add("fa-bars");
+        }
+      });
+    </script>
+  </body>
+</html>
